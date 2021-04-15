@@ -1,0 +1,161 @@
+@font-face {
+    font-family: GothamLight;
+    src: url('../fonts/GothamLight.otf') format("opentype");
+}
+
+:root {
+    /* color vars for Nik */
+    --primary_color: #202020;
+    --secondary_color: #3b3b3b;
+    --accent_color: #ec5f82;
+    --text_color: #ffffff;
+    
+    /* General vars*/
+    --trans_dur: 0.5s;
+
+    /* General */
+    font-size: 1vw;
+    font-family: GothamLight;
+    transition-duration: var(--trans_dur);
+    -webkit-transition-duration: var(--trans_dur);
+}
+
+html {
+    min-height: 100%;
+}
+
+#in {
+    margin: 0pc;
+    padding: 0pc;
+    text-align: center;
+    background-color: var(--primary_color);
+    transition-duration: var(--trans_dur);
+    -webkit-transition-duration: var(--trans_dur);
+}
+
+#out {
+    margin: 1pc;
+    padding: 1pc;
+    background-color: var(--primary_color);
+    transition-duration: var(--trans_dur);
+    -webkit-transition-duration: var(--trans_dur);
+}
+
+form {
+    margin: 0pc;
+    padding: 0pc;
+}
+
+.url_input {
+    font-family: GothamLight;
+    background-color: var(--text_color);
+    color: var(--secondary_color);
+    border: 0;
+    width: 25pc;
+    height: 2pc;
+    font-size: 4pc;
+}
+
+.rip_btn {
+    font-family: GothamLight;
+    background-color: var(--accent_color);
+    color: var(--text_color);
+    border: 0;
+    width: 5pc;
+    height: 2pc;
+}
+
+h2 {
+    color: var(--text_color);
+}
+
+.social_container {
+    position: relative;
+    width: 100vw;
+    top: 90vh;
+}
+
+.url_deets {
+    position: absolute;
+    top: 35vh;
+    transform: translateY(-65vh);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+}
+
+/* For mobile */
+@media only screen and (max-width: 600px) {
+    .url_input {
+        width: 15pc;
+        height: 3pc;
+        font-size: 4vw;
+    }
+    .rip_btn {
+        font-size: 5vw;
+        width: 8pc;
+        height: 3pc;
+        margin-top: 1.5pc;
+        margin-bottom: 1.5pc;
+    }
+    h2 {
+        font-size: 6vw;
+        padding: 0.5pc;
+        margin: 1pc auto;
+    }
+    .social_btn {
+        padding: 1pc 1pc 1pc 1pc;
+        width: 2pc;
+        filter: invert(0%);
+        -webkit-filter: invert(0%);
+        transition-duration: var(--trans_dur);
+        -webkit-transition-duration: var(--trans_dur);
+    }
+    .riptext_deets {
+        text-align: null;
+    }
+    .riptext_deets p {
+        color: var(--text_color);
+        text-align: justify;
+        font-size: 4vw;
+        margin-top: 1pc;
+        margin-bottom: 1pc;
+    }
+}
+
+/* For desktop */
+@media only screen and (min-width: 600px) {
+    h2 {
+        font-size: 2vw;
+        padding: 0.5pc;
+        margin: 1pc auto;
+    }
+    .url_input {
+        width: 40pc;
+        height: 4pc;
+        font-size: 1.5vw;
+        margin-top: 1pc;
+        margin-bottom: 1pc;
+    }
+    .rip_btn {
+        font-size: 1.5vw;
+        width: 12pc;
+        height: 4pc;
+        margin-top: 1.5pc;
+        margin-bottom: 1.5pc;
+    }
+    .social_btn {
+        padding: 1pc 1pc 1pc 1pc;
+        width: 3pc;
+        filter: invert(0%);
+        -webkit-filter: invert(0%);
+        transition-duration: var(--trans_dur);
+        -webkit-transition-duration: var(--trans_dur);
+    }
+    .riptext_deets p {
+        color: var(--text_color);
+        text-align: justify;
+        font-size: 1vw;
+        margin: 2pc;
+    }
+}

@@ -22,9 +22,11 @@
 
 html {
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 #in {
+    min-height: 100vh;
     margin: 0pc;
     padding: 0pc;
     text-align: center;
@@ -34,11 +36,24 @@ html {
 }
 
 #out {
+    min-height: 100vh;
     margin: 1pc;
     padding: 1pc;
     background-color: var(--primary_color);
     transition-duration: var(--trans_dur);
     -webkit-transition-duration: var(--trans_dur);
+}
+
+#out::-webkit-scrollbar {
+    width: 1rem;
+}
+
+#out::-webkit-scrollbar-track {
+    background: #49494957;
+}
+  
+#out::-webkit-scrollbar-thumb {
+    background: #49494957;
 }
 
 form {
@@ -67,12 +82,6 @@ form {
 
 h2 {
     color: var(--text_color);
-}
-
-.social_container {
-    position: relative;
-    width: 100vw;
-    top: 90vh;
 }
 
 .url_deets {
@@ -104,8 +113,8 @@ h2 {
         margin: 1pc auto;
     }
     .social_btn {
-        padding: 1pc 1pc 1pc 1pc;
-        width: 2pc;
+        padding: 1pc 0.5pc 1pc 0.5pc;
+        width: 1.5pc;
         filter: invert(0%);
         -webkit-filter: invert(0%);
         transition-duration: var(--trans_dur);
@@ -120,6 +129,11 @@ h2 {
         font-size: 4vw;
         margin-top: 1pc;
         margin-bottom: 1pc;
+    }
+    .social_container {
+        position: relative;
+        width: 100vw;
+        top: 70vh;
     }
 }
 
@@ -157,5 +171,10 @@ h2 {
         text-align: justify;
         font-size: 1vw;
         margin: 2pc;
+    }
+    .social_container {
+        position: relative;
+        width: 100vw;
+        top: 65vh;
     }
 }

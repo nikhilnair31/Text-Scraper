@@ -23,7 +23,7 @@ def result():
         scaled_df, text_list, meta_titles, meta_info = jsinfo.main(url)
 
         result = jsdata2svm(url, scaled_df, text_list, meta_titles, meta_info)
-        return render_template("output.html", result = result.wait())
+        return render_template("output.html", result = result)
 
 if __name__ == '__main__':
     app.run(debug = True)

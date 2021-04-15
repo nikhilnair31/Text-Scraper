@@ -19,7 +19,7 @@ def getdata(url):
     chrome_options.add_argument("--log-level=3")
     chrome_options.add_argument('--window-size=1920,1080')
     chrome_options.binary_location = GOOGLE_CHROME_PATH
-    driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 
     # chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument('--headless')  

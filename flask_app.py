@@ -25,7 +25,7 @@ def result():
     return render_template("output.html", result = result)
 
 if __name__ == '__main__':
-    #app.run()
-    app.jinja_env.auto_reload = True
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug = True, host="0.0.0.0")
+    app.run()
+    # app.jinja_env.auto_reload = True
+    # app.config['TEMPLATES_AUTO_RELOAD'] = True
+    # app.run(debug = True, host="0.0.0.0")

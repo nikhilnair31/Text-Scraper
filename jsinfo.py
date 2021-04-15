@@ -15,17 +15,10 @@ def getdata(url):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--headless')  
-    #chrome_options.add_argument("--log-level=3")
+    chrome_options.add_argument('--headless')
     chrome_options.add_argument('--window-size=1920,1080')
     chrome_options.binary_location = GOOGLE_CHROME_PATH
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
-
-    # chrome_options = webdriver.ChromeOptions()
-    # chrome_options.add_argument('--headless')  
-    # chrome_options.add_argument("--log-level=3")
-    # chrome_options.add_argument('--window-size=1920,1080')
-    # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
 
     driver.get(url)
     driver.execute_script(open("js/jquery-3.5.1.js").read())
